@@ -21,20 +21,24 @@ class ForumServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'cybersquid');
 
         $this->publishes([
+            __DIR__.'/../routes/cybersquid.php' => config_path('cybersquid.php'),
+        ], 'cybersquid-routes');
+
+        $this->publishes([
             __DIR__.'/../config/cybersquid.php' => config_path('cybersquid.php'),
-        ], 'cybersquid');
+        ], 'cybersquid-config');
 
         $this->publishes([
             __DIR__.'/../resources/views' => resource_path('views/vendor/cybersquid'),
-        ], 'cybersquid');
+        ], 'cybersquid-views');
 
         $this->publishes([
             __DIR__ . '/../resources/assets' => resource_path('../assets'),
-        ], 'cybersquid');
+        ], 'cybersquid-assets');
 
         $this->publishes([
             __DIR__ . '/../resources/lang' => resource_path('lang'),
-        ], 'cybersquid');
+        ], 'cybersquid-lang');
     }
 
     /**

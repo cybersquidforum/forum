@@ -1,11 +1,11 @@
 <?php
 
-namespace Cybersquids\Forum\Http\Controllers\Forum\Web;
+namespace Cybersquid\Forum\Http\Controllers\Forum\Web;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Cybersquids\Forum\Models\Category;
-use Cybersquids\Forum\Models\Forums;
+use Cybersquid\Forum\Models\Category;
+use Cybersquid\Forum\Models\Forums;
 use Cache;
 
 class ForumsController extends Controller

@@ -1,5 +1,6 @@
 <?php
 
-Route::get('forum', function(){
-    echo 'Let&#44s do this :)!';
+
+Route::namespace('Cybersquid\Forum\Http\Controllers\Forum')->group(function () {
+    Route::get('forum', '\Web\CategoryController@index');
 });

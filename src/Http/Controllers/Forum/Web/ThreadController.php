@@ -1,11 +1,10 @@
 <?php
 
-namespace Cybersquids\Forum\Http\Controllers\Forum\Web;
+namespace Cybersquid\Forum\Http\Controllers\Forum\Web;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Cybersquids\Forum\Models\Forums;
-use Cybersquids\Forum\Models\Thread;
+use Cybersquid\Forum\Models\Thread;
 use Cache;
 
 class ThreadController extends Controller

@@ -1,6 +1,6 @@
 <?php
 
-namespace Cybersquids\Forum;
+namespace Cybersquid\Forum;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -21,7 +21,7 @@ class ForumServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'cybersquid');
 
         $this->publishes([
-            __DIR__.'/../routes/cybersquid.php' => config_path('cybersquid.php'),
+            __DIR__.'/../routes/cybersquid.php' => base_path('../routes/cybersquid.php'),
         ], 'cybersquid-routes');
 
         $this->publishes([
@@ -33,11 +33,11 @@ class ForumServiceProvider extends ServiceProvider
         ], 'cybersquid-views');
 
         $this->publishes([
-            __DIR__ . '/../resources/assets' => resource_path('../assets'),
+            __DIR__ . '/../resources/assets' => resource_path('../resources/assets'),
         ], 'cybersquid-assets');
 
         $this->publishes([
-            __DIR__ . '/../resources/lang' => resource_path('lang'),
+            __DIR__ . '/../resources/lang' => resource_path('../resources/lang'),
         ], 'cybersquid-lang');
     }
 

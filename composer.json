@@ -1,8 +1,8 @@
 {
     "name": "cybersquids/forum",
-    "description": "Laravel forum created with vuejs and Vuetify.",
+    "description": "Laravel forum created with vuejs and Vuesax.",
     "keywords": [
-        "cybersquids",
+        "cybersquid",
         "laravel",
         "forum"
     ],

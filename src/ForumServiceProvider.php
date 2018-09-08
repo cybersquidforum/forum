@@ -1,6 +1,6 @@
 <?php
 
-namespace Cybersquids\Forum;
+namespace Cybersquid\Forum;
 
 use Illuminate\Support\ServiceProvider;
 

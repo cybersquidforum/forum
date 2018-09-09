@@ -14,7 +14,7 @@ class ForumServiceProvider extends ServiceProvider
     {
         $this->loadRoutesFrom(__DIR__.'/../routes/cybersquid.php');
 
-        $this->loadMigrationsFrom(__DIR__.'/../migrations');
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
 
         $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'cybersquid');
 
@@ -23,7 +23,7 @@ class ForumServiceProvider extends ServiceProvider
         // Publish migrations
         $this->publishes([
             __DIR__.'/../database/migrations/' => database_path('/migrations')
-        ], 'migrations');
+        ], 'cybersquid-migrations');
 
         // Publish routes
         $this->publishes([

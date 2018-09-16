@@ -17,6 +17,7 @@ class Category extends Model
     protected $casts = [
         'position' => 'integer',
     ];
+    protected $fillable = ['name', 'description', 'position'];
 
     public function forums()
     {

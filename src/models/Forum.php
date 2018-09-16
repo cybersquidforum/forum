@@ -20,6 +20,17 @@ class Forum extends Model
         'threads_count' => 'integer',
     ];
 
+    protected $fillable = [
+        'category_id',
+        'position',
+        'name',
+        'description',
+        'icon',
+        'replies_count',
+        'locked_at',
+        'threads_count',
+    ];
+
     public function category()
     {
         return $this->belongsTo(Category::class);

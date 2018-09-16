@@ -18,6 +18,21 @@ class Post extends Model
         'visits'        => 'integer',
     ];
 
+    protected $fillable = [
+        'user_id',
+        'forum_id',
+        'thread_id',
+        'title',
+        'content',
+        'replies_count',
+        'visits',
+        'locked_at',
+        'pinned_at',
+        'locked_at',
+        'sticky_at',
+        'redirect_to',
+    ];
+
     public function forum()
     {
         return $this->belongsTo(Forum::class);

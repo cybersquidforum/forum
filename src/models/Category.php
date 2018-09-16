@@ -5,24 +5,22 @@ namespace Cybersquid\Forum\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Thread extends Model 
+class Category extends Model 
 {
 
-    protected $table = 'threads';
     public $timestamps = true;
+    protected $table = 'categories';
 
     use SoftDeletes;
-
     protected $dates = ['deleted_at'];
 
-    public function forum()
-    {
-        return $this->belongsTo('Forums', 'forum_id');
-    }
+    protected $casts = [
+        'position' => 'integer',
+    ];
 
-    public function owner()
+    public function forums()
     {
-        return $this->belongsTo('User', 'user_id');
+        return $this->hasMany(Forum::class);
     }
 
 }

@@ -13,12 +13,12 @@ class CreateForeignKeys extends Migration {
 						->onDelete('cascade')
 						->onUpdate('no action');
 		});
-		Schema::table('threads', function(Blueprint $table) {
+        Schema::table('posts', function (Blueprint $table) {
 			$table->foreign('user_id')->references('id')->on('users')
 						->onDelete('no action')
 						->onUpdate('no action');
 		});
-		Schema::table('threads', function(Blueprint $table) {
+        Schema::table('posts', function (Blueprint $table) {
 			$table->foreign('forum_id')->references('id')->on('forums')
 						->onDelete('cascade')
 						->onUpdate('no action');
@@ -30,10 +30,10 @@ class CreateForeignKeys extends Migration {
 		Schema::table('forums', function(Blueprint $table) {
 			$table->dropForeign('forums_category_id_foreign');
 		});
-		Schema::table('threads', function(Blueprint $table) {
+        Schema::table('posts', function (Blueprint $table) {
 			$table->dropForeign('threads_user_id_foreign');
 		});
-		Schema::table('threads', function(Blueprint $table) {
+        Schema::table('posts', function (Blueprint $table) {
 			$table->dropForeign('threads_forum_id_foreign');
 		});
 	}
